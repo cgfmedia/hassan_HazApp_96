@@ -38,11 +38,39 @@
 
 		<script type="text/javascript">
 
-            $(document).ready(function() {
+           $(document).ready(function() {
 
-                document.addEventListener("deviceready",initPushwoosh,false);
+				var articleNumber;
 
-            });
+				$('.backClick').click(function() {
+
+					$('#content_navigation_content').show();
+
+					$('#article' + articleNumber).hide();
+
+				});
+
+				$('.content_navigation_link h3 a').click(function() {
+
+					$('#content_navigation_content').hide();
+
+					articleNumber = $(this).attr('href').substr(-1);
+
+					$('.content_navigation_link').removeClass('active');
+
+					$(this).parent().parent().addClass('active');
+
+					$('#article' + articleNumber).show();                   
+
+				});
+
+				
+
+				 document.addEventListener("deviceready",initPushwoosh,false);
+
+
+
+			});		  
 
         </script>
 
@@ -187,47 +215,7 @@
 
             </div><!-- /content -->
 
-			<script type="text/javascript">
-
-                    $(document).ready(function() {
-
-                        var articleNumber;
-
-                        $('.backClick').click(function() {
-
-                            $('#content_navigation_content').show();
-
-                            $('#article' + articleNumber).hide();
-
-                        });
-
-                        $('.content_navigation_link h3 a').click(function() {
-
-                            $('#content_navigation_content').hide();
-
-                            articleNumber = $(this).attr('href').substr(-1);
-
-                            $('.content_navigation_link').removeClass('active');
-
-                            $(this).parent().parent().addClass('active');
-
-                            $('#article' + articleNumber).show();                   
-
-                        });
-
-
-
-                    });
-
-                </script>
-
-
-
-
-
-
-
-
+			
 
             <style> .nav-glyphish-example .ui-btn .ui-btn-inner { padding-top: 40px !important; width: 60px!important;}		.nav-glyphish-example .ui-btn .ui-icon { width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }#tab1 .ui-icon { background:  url("icons_tech_1579.png") 50% 50% no-repeat; background-size: 50px 50px; }#tab2 .ui-icon { background:  url("icons_communication_1092.png") 50% 50% no-repeat; background-size: 50px 50px; }#tab3 .ui-icon { background:  url("64Px_-_504-11.png") 50% 50% no-repeat; background-size: 30px 30px; }#tab4 .ui-icon { background:  url("64Px_-_504-210.png") 50% 50% no-repeat; background-size: 30px 30px; }#tab5 .ui-icon { background:  url("more.png") 50% 50% no-repeat; background-size: 30px 30px; } .ui-content{ word-wrap: break-word; } </style>
 

@@ -38,11 +38,39 @@
 
 		<script type="text/javascript">
 
-            $(document).ready(function() {
+           $(document).ready(function() {
 
-                document.addEventListener("deviceready",initPushwoosh,false);
+				var articleNumber;
 
-            });
+				$('.backClick').click(function() {
+
+					$('#content_navigation_content').show();
+
+					$('#article' + articleNumber).hide();
+
+				});
+
+				$('.content_navigation_link h3 a').click(function() {
+
+					$('#content_navigation_content').hide();
+
+					articleNumber = $(this).attr('href').substr(-1);
+
+					$('.content_navigation_link').removeClass('active');
+
+					$(this).parent().parent().addClass('active');
+
+					$('#article' + articleNumber).show();                   
+
+				});
+
+				
+
+				 document.addEventListener("deviceready",initPushwoosh,false);
+
+
+
+			});		  
 
         </script>
 
@@ -175,7 +203,7 @@
                     }
                 </style>
                 <div id="navigationContent">
-                    <div id="content_navigation_content" class="content_navigation_content"><div class="content_navigation_link"><h3><a href="#article1">Dressess</a></h3></div><div class="content_navigation_link"><h3><a href="#article2">Shoes</a></h3></div><div class="content_navigation_link"><h3><a href="#article3">Acessories</a></h3></div></div>
+                    <div id="content_navigation_content" class="content_navigation_content"><div class="content_navigation_link"><h3><a href="#article1">Dressess</a></h3></div><div class="content_navigation_link"><h3><a href="#article2">Shoes</a></h3></div><div class="content_navigation_link"><h3><a href="#article3">Acessories</a></h3></div><div class="content_navigation_link"><h3><a href="#article4"></a></h3></div><div class="content_navigation_link"><h3><a href="#article5"></a></h3></div><div class="content_navigation_link"><h3><a href="#article6"></a></h3></div><div class="content_navigation_link"><h3><a href="#article7"></a></h3></div><div class="content_navigation_link"><h3><a href="#article8"></a></h3></div><div class="content_navigation_link"><h3><a href="#article9"></a></h3></div><div class="content_navigation_link"><h3><a href="#article10"></a></h3></div><div class="content_navigation_link"><h3><a href="#article11"></a></h3></div><div class="content_navigation_link"><h3><a href="#article12"></a></h3></div><div class="content_navigation_link"><h3><a href="#article13">Enter</a></h3></div><div class="content_navigation_link"><h3><a href="#article14"></a></h3></div><div class="content_navigation_link"><h3><a href="#article15"></a></h3></div></div>
                     <div id="content_blocks"><div class="content_block" id="article1"><p>Shirts</p>
 
 <p>T-Shirts</p>
@@ -201,7 +229,8 @@
 <p>Gadgets</p>
 
 <p>Caps</p>
-</div></div>
+</div><div class="content_block" id="article4"></div><div class="content_block" id="article5"></div><div class="content_block" id="article6"></div><div class="content_block" id="article7"></div><div class="content_block" id="article8"></div><div class="content_block" id="article9"></div><div class="content_block" id="article10"></div><div class="content_block" id="article11"></div><div class="content_block" id="article12"></div><div class="content_block" id="article13"><p>fffffff</p>
+</div><div class="content_block" id="article14"></div><div class="content_block" id="article15"></div></div>
                     <img id="backMenu" src="./backMenu.png">
                 </div>                
             
@@ -210,47 +239,7 @@
 
             </div><!-- /content -->
 
-			<script type="text/javascript">
-
-                    $(document).ready(function() {
-
-                        var articleNumber;
-
-                        $('.backClick').click(function() {
-
-                            $('#content_navigation_content').show();
-
-                            $('#article' + articleNumber).hide();
-
-                        });
-
-                        $('.content_navigation_link h3 a').click(function() {
-
-                            $('#content_navigation_content').hide();
-
-                            articleNumber = $(this).attr('href').substr(-1);
-
-                            $('.content_navigation_link').removeClass('active');
-
-                            $(this).parent().parent().addClass('active');
-
-                            $('#article' + articleNumber).show();                   
-
-                        });
-
-
-
-                    });
-
-                </script>
-
-
-
-
-
-
-
-
+			
 
             <style> .nav-glyphish-example .ui-btn .ui-btn-inner { padding-top: 40px !important; width: 60px!important;}		.nav-glyphish-example .ui-btn .ui-icon { width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }#tab1 .ui-icon { background:  url("icons_tech_1579.png") 50% 50% no-repeat; background-size: 50px 50px; }#tab2 .ui-icon { background:  url("icons_communication_1092.png") 50% 50% no-repeat; background-size: 50px 50px; }#tab3 .ui-icon { background:  url("64Px_-_504-11.png") 50% 50% no-repeat; background-size: 30px 30px; }#tab4 .ui-icon { background:  url("64Px_-_504-210.png") 50% 50% no-repeat; background-size: 30px 30px; }#tab5 .ui-icon { background:  url("more.png") 50% 50% no-repeat; background-size: 30px 30px; } .ui-content{ word-wrap: break-word; } </style>
 
