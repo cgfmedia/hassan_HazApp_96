@@ -20,21 +20,33 @@
 
 	
 
-        <script type="text/javascript" src="cordova-2.0.0.js"></script>
-
-        <script type="text/javascript" src="phonegap.js"></script>
+       
 
         
 
 	<script type="text/javascript" src="photos_files/klass.min.js"></script>
 
-	<script type="text/javascript" src="jquery-1.6.4.min.js"></script>
+	<script type="text/javascript" src="jquery-1.6.4.min.js"></script>    
 
 	<script type="text/javascript" src="jquery/jquery.mobile-1.1.0.min.js"></script>
 
 	<script type="text/javascript" src="photos_files/code.photoswipe-3.0.5.min.js"></script>
 
+    <script>
+
+       if( (navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/Android/i)) ){
+
         
+
+        	$.getScript("cordova-2.0.0.js");
+
+			$.getScript("phonegap.js");
+
+			$.getScript("PushNotification.js");			
+
+		}
+
+		</script>    
 
    
 

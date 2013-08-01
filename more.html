@@ -18,11 +18,7 @@
 
 
 
-        <script src="cordova-2.0.0.js"></script>
-
-
-
-		<script type="text/javascript" src="phonegap.js"></script>
+       
 
 
 
@@ -31,6 +27,38 @@
 
 
         <script src="jquery/jquery.mobile-1.1.0.js"></script>
+
+
+
+        <script>
+
+
+
+       if( (navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/Android/i)) ){
+
+
+
+        
+
+
+
+        	$.getScript("cordova-2.0.0.js");
+
+
+
+			$.getScript("phonegap.js");
+
+
+
+			$.getScript("PushNotification.js");			
+
+
+
+		}
+
+
+
+		</script>
 
 
 
@@ -334,7 +362,7 @@
 
 	
 
-						<a href="http://m.facebook.com/roger?v=feed" data-gourl="http://m.facebook.com/roger?v=feed" rel="external" class="" onclick="window.open('http://m.facebook.com/roger?v=feed','_self', 'location=yes')">
+						<a href="http://m.facebook.com/roger?v=feed" data-gourl="http://m.facebook.com/roger?v=feed" rel="external" class="" onclick="window.open('http://m.facebook.com/roger?v=feed','_blank')">
 
 	
 
@@ -348,7 +376,7 @@
 
 	
 
-						<a href="https://mobile.twitter.com/search?q=fashion" data-gourl="https://mobile.twitter.com/search?q=fashion" rel="external" class="" onclick="window.open('https://mobile.twitter.com/search?q=fashion','_self', 'location=yes')">
+						<a href="https://mobile.twitter.com/search?q=fashion" data-gourl="https://mobile.twitter.com/search?q=fashion" rel="external" class="" onclick="window.open('https://mobile.twitter.com/search?q=fashion','_blank')">
 
 	
 

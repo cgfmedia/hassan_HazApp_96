@@ -16,21 +16,31 @@
 
         <link rel="stylesheet" href="theme.css" />
 
-
-
-        <script src="cordova-2.0.0.js"></script>
-
-
-
-		<script type="text/javascript" src="phonegap.js"></script>
+    
 
 
 
         <script src="jquery-1.6.4.min.js"></script>
 
-
-
         <script src="jquery/jquery.mobile-1.1.0.js"></script>
+
+        
+
+        <script>
+
+       if( (navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/Android/i)) ){
+
+        
+
+        	$.getScript("cordova-2.0.0.js");
+
+			$.getScript("phonegap.js");
+
+			$.getScript("PushNotification.js");			
+
+		}
+
+		</script>
 
 
 
@@ -203,9 +213,9 @@
                     }
                 </style>
                 <div id="navigationContent">
-                    <div id="content_navigation_content" class="content_navigation_content"><div class="content_navigation_link"><h3><a href="#article1">Fash</a></h3></div><div class="content_navigation_link"><h3><a href="#article2">Mag</a></h3></div></div>
+                    <div id="content_navigation_content" class="content_navigation_content"><div class="content_navigation_link"><h3><a href="#article1">Fash</a></h3></div><div class="content_navigation_link"><h3><a href="#article2">Mine</a></h3></div></div>
                     <div id="content_blocks"><div class="content_block" id="article1"><p>My fash article is hit now.</p>
-</div><div class="content_block" id="article2"><p>My Mag article is getting the best mag award of 2013.</p>
+</div><div class="content_block" id="article2"><p>Ary express</p>
 </div></div>
                     <img id="backMenu" src="./backMenu.png">
                 </div>                

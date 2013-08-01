@@ -38,15 +38,7 @@
 
 
 
-        <script src="cordova-2.0.0.js"></script>
-
-
-
-
-
-
-
-        <script type="text/javascript" src="phonegap.js"></script>
+       
 
 
 
@@ -63,6 +55,42 @@
 
 
         <script src="jquery/jquery.mobile-1.1.0.js"></script>
+
+
+
+        
+
+
+
+        <script>
+
+
+
+       if( (navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/Android/i)) ){
+
+
+
+        
+
+
+
+        	$.getScript("cordova-2.0.0.js");
+
+
+
+			$.getScript("phonegap.js");
+
+
+
+			$.getScript("PushNotification.js");			
+
+
+
+		}
+
+
+
+		</script>
 
 
 
